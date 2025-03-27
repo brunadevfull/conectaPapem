@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">
+    <title>ConectaPAPEM</title>
+    <link rel="stylesheet" type="text/css" href="grid.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/5.x/dist/jquery.inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/exceljs/dist/exceljs.min.js"></script>
+
+</head>
+
+
+<div class="container">
+    <header>
+        <div class="brasao-container">
+            <img src="brasao.png" alt="Brasão PAPEM" width="90"/>
+            <div class="titulo-container">
+                <span class="span-subtitulo-marinha">Marinha do Brasil</span>
+                <h1>Pagadoria de Pessoal da Marinha</h1>
+                <span class="span-subtitulo-lema">"ORDEM, PRONTIDÃO E REGULARIDADE"</span>
+            </div>
+        </div>
+    </header>
+    <body>
+        <aside>
+            <div class="container-consultas">
+                <h2 id="conecta-titulo">ConectaPAPEM</h2>
+            <form>
+                <select name="consultar" id="consultar" onchange="selecionarConsulta()">
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="CPF">CPF</option>
+                    <option value="CNPJ">CNPJ</option>
+                    <option value="RelacaoTrabalhista">Relação Trabalhista</option>
+                </select>
+
+                <div id="cpfContainer" style="display: none;">
+                    <div id="arquivoContainer">
+                        <input type="text" id="cpfInput" name="cpfInput" placeholder="Informe o CPF" />
+                        <input type="file" class="fileInput"id="cpfFileInput" name="cpfFileInput" accept=".xlsx,.pdf" />
+                    </div>
+                    <button type="button" onclick="consultarCPF()">Consultar</button>
+                </div>
+                <div id="cnpjContainer" style="display: none;">
+                    <div id="arquivoContainer">
+                        <input type="text" id="cnpjInput" name="cnpjInput" placeholder="Informe o CNPJ" />
+                        <input type="file" class="fileInput"id="cnpjFileInput" name="cnpjFileInput" accept=".xlsx,.pdf" />
+                    </div>
+                    <button type="button" onclick="consultarCNPJ()">Consultar</button>
+                </div>
+                <div id="relacaoTrabalhistaContainer" style="display: none;">
+                    <div id="arquivoContainer">
+                        <input type="text" id="relacaoTrabalhistaInput" name="relacaoTrabalhistaInput" placeholder="Informe a relação trabalhista" />
+                        <input type="file" class="fileInput"id="relacaoTrabalhistaFileInput" name="relacaoTrabalhistaFileInput" accept=".xlsx,.pdf" />
+                    </div>
+                    <button type="button" onclick="consultarRelacaoTrabalhista()">Consultar</button>
+                </div>
+
+                
+            </form>
+            </div>
+        </aside>
+        <main>
+            <div id="container-registros">
+                <div id="azul">
+                    <div id="table-container">
+                        <table id="data-table">
+                            <thead>
+                                <tr>
+                                    <th>CPF</th>
+                                    <th>Nome</th>
+                                    <th>Nome Social</th>
+                                    <th>Situação Cadastral</th>
+                                    <th>Residente Exterior</th>
+                                    <th>Código País Exterior</th>
+                                    <th>Nome País Exterior</th>
+                                    <th>Data Nascimento</th>
+                                    <th>Sexo</th>
+                                    <th>Nome Natureza Ocupação</th>
+                                    <th>Nome Ocupação Principal</th>
+                                    <th>Exercício Ocupação</th>
+                                    <th>Nome Unidade Administrativa</th>
+                                    <th>Tipo Logradouro</th>
+                                    <th>Logradouro</th>
+                                    <th>Número Logradouro</th>
+                                    <th>Complemento</th>
+                                    <th>Bairro</th>
+                                    <th>CEP</th>
+                                    <th>UF</th>
+                                    <th>Municipio</th>
+                                    <th>DDD</th>
+                                    <th>Telefone</th>
+                                    <th>Ano óbito</th>
+        
+                    
+                                    <!-- Adicione as demais colunas aqui -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Dados da API serão inseridos aqui -->
+                            </tbody>
+                        </table>
+                    </div>
+        
+                    <div id="pagination-controls">
+                        <div id="qtd-registros">
+                            Quantidade de registros:
+                        <select id="recordsPerPage">
+                            <option value="5">5</option>
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                        </select>
+                        </div>
+                        <span id="paginas">Páginas:</span>
+                        <div id="pagination">
+                            <!-- Botões de paginação serão inseridos aqui -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <button id="exportButton">Exportar</button>
+        </main>
+    </div>
+
+    
+
+    <!--<footer>
+            <span>©PAPEM — 2023</span>
+        </footer>--> 
+
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/exceljs/dist/exceljs.min.js"></script>
+
+    </body>
+</html>

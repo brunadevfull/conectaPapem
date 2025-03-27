@@ -1,0 +1,40 @@
+eu tenho um código que está trazendo dados de uma API. Eu quero que esses dados sejam exibidos em uma tabela que tenha as seguintes configurações:
+
+1. O Thead(colunas) exibirá os seguintes dados, na seguinte ordem:
+
+1. CPF
+2. NOME
+3. NOME SOCIAL
+4. SITUAÇÃO CADASTRAL
+5. RESIDENTE EXTERIOR
+6. CÓDIGO PAÍS EXTERIOR
+7. NOME PAÍS EXTERIOR
+8. DATA NASCIMENTO
+9. SEXO
+10. NOME NATUREZA OCUPAÇÃO
+11. NOME OCUPAÇÃO PRINCIPAL
+12. EXERCÍCIO OCUPAÇÃO 
+13. NOME UNIDADE ADMINISTRATIVA
+14. TIPO LOGRADOURO
+15. LOGRADOURO
+16. NÚMERO LOGRADOURO
+17. COMPLEMENTO
+18. BAIRRO
+29. CEP
+20. UF
+21. MUNICÍPIO
+22. DDD
+23. TELEFONE
+24. ANO ÓBITO
+
+2. Cada linha irá corresponder ao resultado da consulta de um CPF
+3. Se o Thead ultrapassar mais de 90% da viewwidth da tela a tabela deverá ter um scroll, para que os dados não ultrapassem 90% largura da wiew.
+4. A tabela também deverá ter uma páginação, onde em cada página será exibido somente o resultado de 10 consultas de CPF. Crie o HTML e o javascript para essa tabela.
+
+Considerando as informações fornecidas anteriormente para construção da tabela, dando ênfase no seguinte requisito pedido anteriormente: "A tabela também deverá ter uma páginação, onde em cada página será exibido somente o resultado de 10 consultas de CPF."
+Eu quero realizar uma alteração nesse requisito, por padrão será exibido o resultado de 10 consultas de CPF por página. No entanto, quero acrescentar uma opção na tabela, ao lado da paginação, que permita que o usuário escolha quantos resultados de CPF por página será exibido. Chamarei esses resultados de CPF de registros. Deverá haver 3 opções de exibição de registros por página:
+1. Ao selecionar 5 registros, deverá ser exibido o resultado de 5 consultas de CPF
+2. Ao selecionar 10 registros, deverá ser exibido o resultado de 10 consultas de CPF
+3. Ao selecionar 20 registros, deverá ser exibido o resultado de 20 consultas de CPF
+
+Ainda em relação ao código acima quero que seja acrescentada uma nova funcionalidade. Todos os dados da tabela devem poder serem exportados em uma planilha xlsx. Adicione a opção de exportar abaixo da tabela, ao clicar no botão "exportar" os dados da tabela deverão ser exportados para uma planilha xlsx

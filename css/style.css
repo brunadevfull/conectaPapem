@@ -1,0 +1,404 @@
+*{
+    padding:0;
+    margin:0;
+    
+}
+body{
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 50px;
+}
+    
+    #btn_exportar_xlsx{
+margin-left:120px;
+    }
+    
+#cad_ {
+     
+    padding: 200px; /* Espaçamento interno */
+    width: auto; /* Ou uma largura específica, se necessário */
+  height:650px;
+    margin: auto; /* Isso centraliza o contêiner na tela */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para o contêiner */
+    border-radius: 10px; /* Borda arredondada */
+}
+.titulo-cadastro {
+    font-size: 24px; /* ou o tamanho que você preferir */
+    font-weight: bold; /* se você quer a fonte em negrito */
+    color: #333; /* cor da fonte, ajuste conforme necessário */
+    margin-bottom: 1rem; /* espaço abaixo do título */
+    display: block; /* faz o label se comportar como um bloco */
+    text-align: center; /* centraliza o texto */
+}
+.form-input {
+    background: #e3e3e3;
+    padding: 10px 15px 10px 35px; /* Ajuste o preenchimento esquerdo conforme necessário */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 60px ;/* Ajuste conforme necessário para dar espaço ao ícone */
+    margin-bottom: 1rem; /* Espaçamento entre os campos */
+}
+
+.input-icon-wrapper {
+    position: relative;
+    min-height: 50px;
+
+}
+
+.input-icon-wrapper i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    z-index: 10;
+}
+
+.input-icon-wrapper .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.input-icon-wrapper input {
+    padding: 10px 15px; /* Ajuste conforme necessário para não sobrepor o ícone */
+    padding-left: 35px;
+}
+#cadastro {
+    width: 100%;
+    
+    margin: auto;
+    padding: 2rem;
+  
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  
+  
+
+}
+
+#cadastro label {
+    font-weight: 700;
+    margin-top: 1rem;
+    display: block;
+}
+
+#cadastro button {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#cadastro button:hover {
+    background-color: #004494;
+}
+
+#cadastro div {
+    margin-bottom: 1rem;
+}
+.fileInput{
+    margin-top:12.5px;
+}
+
+#disclaimer {
+    position: relative; 
+    margin-top: 9px;
+    font-size: 12px;
+    background-color:#f4f4f4;
+    text-align: center;
+
+   
+}
+@media screen and (max-width: 768px) {
+    #disclaimer label {
+      font-size: 0.8em; 
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    #disclaimer label {
+      font-size: 0.7em; 
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #disclaimer label {
+      font-size: 0.6em; 
+    }
+  }
+
+
+@media screen and (max-width: 600px) {
+    #disclaimer {
+        position: fixed; 
+        top: 5px; 
+        width: 100%; 
+        z-index: 9999; 
+    }
+}
+
+header {
+    background-color: #2160bd;
+    align-items: center;
+    width: 100%; 
+    z-index: 1000; 
+    top: 0; 
+    position: fixed;
+    height: 146px;
+    
+}
+
+.jqx-grid-column-header {
+  
+
+}
+
+.jqx-grid-cell {
+   
+   
+}
+
+.brasao-container{
+    display:flex;
+    align-items: center;
+    width:100%;
+    color:white;
+}
+.espaco{
+    padding-top:50px;
+    color: #333;
+    font-weight: bold;
+    padding-left:1100px;
+    font-size: 19px;
+    color: var(--azul-normal);
+    font-family: 'Muli-bold',sans-serif;
+}
+    h2.site-name{
+       padding-left:450px; 
+       font-family: 'Octin College RG - Bold',Verdana,Tahoma,sans-serif ;
+    }
+
+
+.custom-file-upload {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 6px 12px;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: box-shadow 0.3s ease; /* Adicionando uma transição para suavizar a mudança */
+    font-weight: normal; /* Remover negrito */
+
+}
+
+.custom-file-upload input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+  
+
+header img{
+    margin-right: 10px;
+    height:70px;
+    margin-top:15px;
+}
+
+.titulo-container{
+    display:flex;
+    flex-direction: column;
+}
+
+
+h1{
+    margin:0 0 0 2%;
+    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.span-subtitulo-marinha{
+    margin:0 0 0 2%;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.span-subtitulo-lema{
+    margin:0 0 0 2%;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+main{
+    width: 100vw;
+    margin-bottom:10vh;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:19vh;
+
+}
+
+
+#conecta{
+    margin-right:17vw;
+    margin-top:10vh;
+    color: #7F7F7F;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  
+}
+
+#consultar{
+    margin:2vh;
+  
+    padding:10px;
+    border:2px solid #2160bd;
+    border-radius: 6px;
+    background-color: white;
+
+}
+
+
+button {
+    background-color: #4682B4;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+    
+}
+button:hover {
+    background-color: #0db60d; 
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #4b8cfb;
+    border-radius: 5px;
+    background-color: #4b8cfb;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    margin:10px;
+}
+.fade-in {
+    animation: fadeIn ease 2s; /* Aplica a animação fadeIn com duração de 3 segundos */
+    animation-iteration-count: 1;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilo do botão ao passar o mouse */
+.custom-button:hover {
+    background-color: #2e6cd1;
+    border-color: #2e6cd1;
+}
+
+/* Estilo do botão ao ser pressionado */
+.custom-button:active {
+    background-color: #1854a0;
+    border-color: #1854a0;
+}
+
+/* Estilo do botão desativado */
+.custom-button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Estilo do botão quando está focado */
+.custom-button:focus {
+   
+    box-shadow: 0 0 0 3px rgba(75, 140, 251, 0.3);
+}
+#jqxgrid {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    overflow-y: auto;
+    margin-left: 90px;
+        
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #007bff;
+}
+
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
+
+
+
+
+#logout-button {
+    padding-left:500px;
+}
+   
+
+#bem-vindo {
+    float: left;
+}

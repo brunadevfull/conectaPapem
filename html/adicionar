@@ -1,0 +1,8 @@
+data da exportação(consulta) - bruna
+usuário que realizou a consulta - bruna
+_______________________________________
+titulo: relatório (cpf/cnpj/rt)
+fonte: API conecta GOV - exportação
+formatar impressão com fonte
+logica pra tabela só ser chamada depois do consultar
+

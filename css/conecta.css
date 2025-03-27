@@ -1,0 +1,389 @@
+.btn-container {
+            
+    top: 20px; 
+    right: 20px; 
+    display: flex;
+    flex-direction: column;
+}
+
+body,html {
+background: #efefef;
+display: flex;
+
+align-items: center;
+min-height: 100%;
+z-index: -1;
+}
+
+.btn1{
+border: 3px solid #1a1a1a;
+display: inline-block;
+align-items: center;
+padding: 60px;
+position: relative;
+text-align: center;
+transition: background 600ms ease, color 600ms ease;
+margin: -5px; 
+
+}
+
+#loginChart, #consultaChart{
+    width:580px;
+    height:580px;}
+
+
+input[type="radio"].toggle {
+display: none;
+}
+
+#labelChangeFileButton, #labelRemoveFileButton{
+    padding:0;
+}
+
+.toggle + label{
+cursor: pointer;
+min-width: 150px;
+display: inline-block;
+padding: 10px;
+text-align: center;
+position: relative;
+transition: padding 0.4s ease;
+
+}
+
+.toggle-left + label:after {
+content: "";
+background:#ADD8E6;	
+position: absolute;
+top: 0px;
+right: 0px; 
+width: 0; 
+height: 50px; 
+z-index: -1;
+transition: width 0.4s ease, right 0.4s ease; 
+}
+
+.toggle-right + label:after {
+content: "";
+background:#ADD8E6;
+position: absolute;
+top: 0px;
+left: 0px; 
+width: 0px; 
+height: 50px; 
+z-index: -1;
+transition: width 0.4s ease, left 0.4s ease; 
+}
+
+
+.toggle-left + label:after,
+.toggle-right + label:after {
+color: white; 
+position: absolute;
+}
+
+input[type="radio"].toggle-left:checked + label:after {
+width: 100%; 
+height:100%;
+
+box-shadow: 0px 0px 5px 5px  black;
+
+}
+
+input[type="radio"].toggle-right:checked + label:after {
+width: 100%; 
+height:100%;
+
+box-shadow:  0px 0px 5px 5px black;
+
+}
+.toggle-left + label,
+.toggle-right + label {
+cursor: pointer;
+display: inline-block;
+padding: 10px 10px;
+text-align: center;
+position: relative;
+width: 91px; 
+}
+
+
+.main-container {
+    
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    background: #ffffff; 
+    border: 1px solid #d7d7d7; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    padding: 30px; 
+    width: 80%;
+    max-width: 500px; 
+    margin: 50px 0 150px; 
+    transition: transform 0.3s ease-out; 
+    transform: translateY(-20px); 
+    opacity: 0; 
+    height: 380px; 
+    margin-top:150px;
+   
+}
+
+
+.main-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    z-index: -1;
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.8), rgba(250, 250, 250, 0.8));
+    border-radius: 12px; 
+    transition: opacity 0.3s ease-out;
+    
+}
+
+
+#cpfInput,
+#arquivoInput {
+    position: inline-block;
+    top: 170px; 
+    left: 180px; 
+    transform: translateX(10%); 
+    width: 80%; 
+    display: none; 
+  margin-left:85px;
+    border-radius: 5px;
+    
+    
+}
+
+
+.file-button-container {
+    display: flex;
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    align-items: center; /* Alinha os elementos verticalmente */
+}
+
+
+
+/* Estilo para os ícones */
+.file-button-container img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px; /* Espaçamento entre os ícones */
+}
+
+
+#cpfInput.active,
+#arquivoInput.active {
+    display: block;
+    animation: fadeIn 0.3s;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+@keyframes slideFadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.main-container {
+    animation: slideFadeInUp 0.5s ease-out forwards;
+}
+
+
+.select-container {
+    display: flex;
+    margin:10px;
+    justify-content: center; 
+   
+    width: 90%; 
+}
+
+
+#btn_consult{
+margin:20px;
+margin-left: 160px;
+
+
+}
+#digenv{
+    margin-left:50px;
+}
+
+#jq {
+            margin-top: 90px;
+            width: 80%; 
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+      
+        #loadingIndicator {
+            text-align: center;
+            padding: 20px;
+        }
+        .dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: black;
+            margin: 0 3px;
+            animation: pulse 1.4s infinite ease-in-out both;
+        }
+        .dot:nth-child(1) { animation-delay: -0.32s; }
+        .dot:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes pulse {
+            0%, 80%, 100% {
+                transform: scale(0);
+            } 40% {
+                transform: scale(1.0);
+            }
+        }
+        #changeFileButton{
+           
+          
+            width:20px;
+            height:20px;
+        }
+        #removeFileButton{
+            margin:10px;
+            width:20px;
+            height:20px;
+           
+        }
+        .btn1 {
+        border: 3px solid #1a1a1a;
+        display: inline-block;
+        align-items: center;
+        padding: 10px;
+        position: relative;
+        text-align: center;
+        transition: background 600ms ease, color 600ms ease;
+        margin: -5px;
+    }
+    
+    .btn1 img {
+        width: 30px;
+        height: 30px;
+        display: block;
+        margin: auto;
+    }
+    .form-input {
+        background: #e3e3e3;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      
+        padding-left: 30px;
+    }
+    .form-input:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+    .form-input-icon {
+background: #e3e3e3;
+padding: 10px 15px;
+border-radius: 5px;
+border: 1px solid #ccc;
+padding-left: 35px; 
+}
+
+    .login-btn {
+        background: linear-gradient(to bottom, #0f74ea, #2f7ab7);
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .login-btn:hover {
+        background: linear-gradient(to bottom, #5f6c7b, #8e9eab);
+    }
+   
+    .input-group i {
+        position: absolute;
+left: 10px;
+top: 10px;
+font-size: 18px;
+color: #555;
+    }
+    .login-box .text-2xl i {
+        margin-right: 10px;
+    }
+    .loader {
+display: none;
+border: 16px solid #f3f3f3;
+border-top: 16px solid #3498db;
+border-radius: 50%;
+width: 80px;
+height: 80px;
+animation: spin 2s linear infinite;
+position: fixed;
+top: 50%;
+left: 50%;
+z-index: 9999;
+}.password-requirements ul {
+list-style: none;
+padding-left: 0;
+margin: 0;
+}
+
+.password-requirements li {
+color: #777;
+font-size: 14px;
+padding-left: 30px;
+position: relative;
+}
+.password-requirements li::before {
+content: '—';
+position: absolute;
+left: 0;
+top: 0;
+}
+.password-requirements li.valid {
+color: green;
+}
+
+.password-requirements li.invalid {
+color: red;
+text-decoration: line-through;
+}
+
+
+.password-requirements li .fa-check {
+display: none; 
+color: #28a745; 
+}
+
+.password-requirements li.valid .fa-check {
+display: inline; 
+color: #28a745; 
+margin-left: 5px; 
+}
+
+
+@keyframes spin {
+0% { transform: translate(-50%, -50%) rotate(0deg); }
+100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+    

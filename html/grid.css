@@ -1,0 +1,245 @@
+html, body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.container{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20vh 25vh 1fr;
+}
+
+header{
+    background:#2160bd;
+    display:flex;
+    align-items: center;
+
+
+}
+
+
+.brasao-container{
+    display:flex;
+    align-items: center;
+    color:white;
+}
+
+header img{
+    margin:0 0 0 20vw;
+}
+
+.span-subtitulo-marinha{
+    margin:0 0 0 2%;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+h1{
+    margin:0 0 0 2%;
+    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.span-subtitulo-lema{
+    margin:0 0 0 2%;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/*container consultas*/
+
+aside{
+    border:1px solid black;
+    display:flex;
+    justify-content: center;
+}
+
+.container-consultas{
+    width:20vw;
+    text-align: center;
+}
+
+h2{
+    color:#7F7F7F;
+}
+
+#consultar{
+    width:20vw;
+    padding:6px;
+    border:2px solid #2160bd;
+    border-radius: 6px;
+    background-color: white;
+}
+
+#arquivoContainer{
+    display: flex;
+    align-items: center;
+}
+
+.fileInput{
+    margin-top:12.5px;
+}
+
+#cpfInput{
+    width:8vw;
+    padding:5px;
+    border:2px solid #abb6c8;
+    border-radius: 6px;
+    background-color: white;
+    margin-top: 5%;
+    margin-right: 1.5px;
+}
+
+
+#cnpjInput{
+    width:8vw;
+    padding:5px;
+    border:2px solid #abb6c8;
+    border-radius: 6px;
+    background-color: white;
+    margin-top: 5%;
+}
+
+
+
+
+#relacaoTrabalhistaInput{
+    width:8vw;
+    padding:5px;
+    border:2px solid #abb6c8;
+    border-radius: 6px;
+    background-color: white;
+    margin-top: 5%;
+}
+
+button{
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    font-weight: 500;
+    text-align: center;
+    padding:6px;
+    border-radius: 6px;
+    margin-top: 1vh;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #2d7c40;
+
+}
+
+/*tabela*/
+
+
+#table-container {
+    max-width: 90vw;
+    overflow-x: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border:1px solid #a3d1eb;
+    
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border:1px solid #a3d1eb;
+    
+}
+
+thead{
+    background-color: #dee5e9;
+}
+
+th, td {
+    border: 1px solid #a3d1eb;
+    padding: 8px;
+    text-align: left;
+    font-size: 13px;
+}
+
+#pagination-controls{
+    /*border:2px solid #a3d1eb;*/
+    display:flex;
+    margin-left: 4.5%;
+    margin-top: 5px;
+    width:91%;
+    align-items: center;
+    
+}
+
+#qtd-registros{
+    /*border:2px solid red;*/
+    padding:2px;
+}
+
+#paginas{
+    margin-left:5px;
+    
+    
+    }
+    
+#pagination {
+    margin-left: 1%;
+    padding:2px;
+}
+
+#pagination button {
+    padding:5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+    
+#exportButton{
+color: #fff;
+background-color: #28a745;
+border-color: #28a745;
+display: inline-block;
+font-weight: 500;
+text-align: center;
+padding:10px;
+border-radius: 6px;
+margin-left: 50%;
+margin-bottom: 3vh;
+}
+
+
+button:hover{
+    cursor: pointer;
+    background-color: #2d7c40;
+
+}
+
+#exportButton:hover{
+    background-color: #2d7c40;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*footer {
+    display:flex;
+    align-items: center;
+    justify-content: center ;
+    background-color: #2160bd;
+    height: 10vh;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    color: white;
+    font-size: 12px;
+}
+*/
+
